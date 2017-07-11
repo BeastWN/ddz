@@ -1,0 +1,147 @@
+/**
+ * Creation time: 2017/7/9
+ * author: Choo,641474670@qq.com
+ * version: beta;
+ */
+
+/**
+ * reset.css
+ * 重置各个浏览器之间的差异
+ */
+
+/* 清除内外边距 */
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, fieldset, lengend, button, input, textarea, th, td {
+  margin: 0;
+  padding: 0;
+}
+
+/* 设置默认字体,用 ascii 字符表示，使得在任何编码下都无问题 */
+body, button, input, select, textarea {
+  font: 12px/1 Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;
+}
+
+address, cite, dfn, em, var {
+  font-style: normal;
+}
+
+/* 将斜体扶正 */
+code, kbd, pre, samp, tt {
+  font-family: "Courier New", Courier, monospace;
+}
+
+
+/* 小于 12px 的中文很难阅读，让 small 正常化 */
+small {
+  font-size: 12px;
+}
+
+/* 重置列表元素 */
+ul, ol {
+  list-style: none;
+}
+
+/* 重置文本格式元素 */
+a {
+  text-decoration: none;
+}
+
+/* 注：1.ie6 不支持 abbr; 2.这里用了属性选择符，ie6 下无效果 */
+abbr[title], acronym[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+q:before, q:after {
+  content: '';
+}
+
+/* 重置表单元素 */
+legend {
+  color: #000;
+}
+
+/**
+ * for ie6
+ */
+
+/* img 搭车：让链接里的 img 无边框 */
+fieldset, img {
+  border: none;
+}
+
+/* 使得表单元素在 ie 下能继承字体大小 */
+button, input, select, textarea {
+  font-size: 100%;
+}
+
+
+/* 重置表格元素 */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+/* 重置 hr */
+hr {
+  border: none;
+  height: 1px;
+}
+
+/* 让非ie浏览器默认也显示垂直滚动条，防止因滚动条引起的闪烁 */
+html {
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+/**
+ * base.css
+ * 给项目提供原始类
+ */
+
+/* 清除浮动 */
+.clearfix:after {
+  content: ""; 
+  display: block; 
+  height: 0; 
+  clear: both; 
+  visibility: hidden;  
+}
+
+/* 触发hasLayout */ 
+.clearfix {
+  zoom: 1; 
+}
+
+/* 隐藏 */
+.none {
+  display: none;
+}
+
+/* 显示 */
+.block {
+  display: block;
+}
+
+/* 左浮动 */
+.fl {
+  float: left;
+}
+
+/* 右浮动 */
+.fr {
+  float: right;
+}
+
+/* 字体大小 */
+.f12 {
+  font-size: 12px;
+}
+
+.f14 {
+  font-size: 14px;
+}
+
+.f16 {
+  font-size: 16px;
+}
