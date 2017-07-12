@@ -31,15 +31,15 @@
 					</div>
 				</div>
 				<p class="error-text" v-text=" code_error "></p>
-				<!-- 阅读协议 -->
-				<div class="form-group">
-					<p class="tip-text">点击登录,即表示您已阅读并接受
-						<span class="agreementBook" @click=" showBook(true) ">《多动朕用户协议》</span>
-					</p>
-				</div>
 				<!-- 登录按钮 -->
 				<div class="form-group">
-					<button class="btn loginBtn" @click=" sendCode ">登陆</button>
+					<button class="btn loginBtn" @click=" sendCode ">注册/登录</button>
+				</div>
+				<!-- 阅读协议 -->
+				<div class="form-group">
+					<p class="tip-text">注册即表示您已阅读,并同意
+						<span class="agreementBook" @click=" showBook(true) ">《多动朕用户协议》</span>
+					</p>
 				</div>
 			</form>
 		</article>
@@ -65,7 +65,7 @@
 			// 向服务器发起获取验证码请求
 			getCode() {
 				// 先判断手机格式是否正确
-				if(!/^(1[34578]\d{9})|(0\d{2,3}-?\d{7,8})$/ig.test(this.phoneVal)) {
+				if(!(/^(1[34578]\d{9})$/ig.test(this.phoneVal))) {
 					this.phone_error = '请检查手机格式';
 					return false;
 				}
@@ -146,8 +146,10 @@
 			color: $error_color;
 		}
 		.tip-text {
+			text-align: center;
 			color: $gray_color;
-			margin: 10px 0;
+			margin: 15px 0 10px;
+			width: 100%;
 			.agreementBook {
 				color: #086eef;
 			}
@@ -219,7 +221,7 @@
 		.sendCodeBtn-wrap {	// 发送验证码包裹层
 			flex: 1;
 			.sendCodeBtn {
-				height: 25px;
+				height: 30px;
 				&:focus { outline: none }
 			}
 			.disabled {
@@ -227,6 +229,8 @@
 			}
 		}
 		.loginBtn { // 登录按钮包裹层
+			margin-top: 20px;
+			box-shadow: 0px 10px 18px -7px $main_color;
 			height: 35px;
 			font-size: 16px;
 			&:focus { outline: none }
