@@ -62,7 +62,8 @@
 				code_error: '',
 				sended: false, // 是否已经发送验证码
 				endTime: 60, 	 // 倒计时
-				bookShow: false // 是否显示用户协议
+				bookShow: false, // 是否显示用户协议
+				silderShow
 			}
 		},
 		methods: {

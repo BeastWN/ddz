@@ -1,6 +1,6 @@
 <!-- 移动滑块 -->
 <template>
-	<div id="MoveSlider">
+	<div id="MoveSlider" v-if=" silderShow ">
 		<!-- 拼图包裹层 -->
 		<div class="img-wrap">
 			<img src="../../../assets/puzzle_bg.png" alt="移动滑块背景图片" class="img-pic">
@@ -36,6 +36,10 @@
 		props: {
 			oLeft: {
 				type: Number,
+				required: true
+			},
+			silderShow: {
+				type: Boolean,
 				required: true
 			}
 		},
