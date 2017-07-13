@@ -1,10 +1,11 @@
 <!-- 注册组件 -->
 <template>
 	<div id="Register">
+		<move-slider :oLeft = " 194 "></move-slider>
 		<agreement-book :bookShow=" bookShow " @hide=" showBook(false) "></agreement-book>
 		<!-- 顶部banner图 -->
 		<header>
-			<img src="../assets/banner.png" alt="多动朕图标">
+			<img src="../../assets/banner.png" alt="多动朕图标">
 		</header>
 		<!-- 用户表单 -->
 		<article>
@@ -43,11 +44,14 @@
 				</div>
 			</form>
 		</article>
+		<!-- 遮罩层 -->
+		<div class="mask"></div>
 	</div>
 </template>
 
 <script>
-	import AgreementBook from './common/AgreementBook.vue';
+	import AgreementBook from './childrens/AgreementBook.vue';
+	import MoveSlider from './childrens/MoveSlider.vue';
 	export default {
 		name: 'Register',
 		data() {
@@ -129,7 +133,8 @@
 			}
 		},
 		components: {
-			AgreementBook
+			AgreementBook,
+			MoveSlider
 		}
 	}
 </script>
@@ -235,5 +240,13 @@
 			font-size: 16px;
 			&:focus { outline: none }
 		}
+	}
+	.mask {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: rgba(0,0,0,.6);
 	}
 </style>
